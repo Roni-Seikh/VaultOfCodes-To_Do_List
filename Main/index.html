@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>📋 Advanced To-Do List</h2>
+        <!-- User Name Section -->
+        <div class="user-section">
+            <input type="text" id="userNameInput" placeholder="Enter your name">
+            <button onclick="saveUserName()">✔️ Save</button>
+            <h3 id="greetingMessage">Hello, User! 👋</h3>
+            <p id="taskCounter">📌 Pending Tasks: 0</p> 
+        </div>
+
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle">🌙 Dark Mode</button>
+
+        <!-- Task Input Section -->
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Task Title">
+            <button onclick="startVoiceInput()">🎤 Voice Input</button>
+
+            <!-- Task Due Date & Timer -->
+            <input type="datetime-local" id="taskDeadline">
+            <p id="countdownTimer"></p>
+
+            <!-- Task Priority -->
+            <select id="taskPriority">
+                <option value="High">🔥 High</option>
+                <option value="Medium">⚡ Medium</option>
+                <option value="Low">🌱 Low</option>
+            </select>
+
+            <!-- Task Category -->
+            <select id="filterCategory" onchange="displayTasks()">
+                <option value="All">📂 All Categories</option>
+                <option value="Work">📁 Work</option>
+                <option value="Personal">🏡 Personal</option>
+                <option value="Shopping">🛒 Shopping</option>
+                <option value="Others">📝 Others</option>
+            </select>
+
+            <!-- Task Repeat Options -->
+            <select id="taskRepeat">
+                <option value="None">No Repeat</option>
+                <option value="Daily">📅 Daily</option>
+                <option value="Weekly">📆 Weekly</option>
+                <option value="Monthly">🗓️ Monthly</option>
+            </select>
+
+            <!-- Task Description -->
+            <textarea id="taskDescription" placeholder="Enter task details..."></textarea>
+
+            <!-- Task Action Buttons -->
+            <button onclick="addTask()">➕ Add Task</button>
+            <button onclick="getAISuggestions()">🤖 AI Suggestions</button>
+        </div>
+
+        <!-- Progress Section -->
+        <div class="progress-section">
+            <p>📊 Task Progress: <span id="progressPercent">0%</span></p>
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

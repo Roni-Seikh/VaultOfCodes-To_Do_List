@@ -1,0 +1,354 @@
+/* General Styling */
+body {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    align-items: flex-start;
+    height: 100vh; 
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+
+/* Container Styling */
+.container {
+    background: linear-gradient(135deg, #dfe9f3, #f8f9fa);
+    padding: 50px;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.25), 
+    0px 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+.container:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 12px;
+    z-index: -1;
+    animation: glow 3s infinite alternate ease-in-out;
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+
+/* Progress Bar Container Styling */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-top: 10px;
+}
+
+.progress-bar-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #00C9FF);
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 0px 15px rgba(76, 175, 80, 0.8);
+}
+
+.progress-bar-fill::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(255, 255, 255, 0.2) 0px,
+        rgba(255, 255, 255, 0.2) 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    animation: progressStripes 1s linear infinite;
+}
+
+#progressFill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #00C9FF, #4CAF50);
+    transition: width 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+
+/* General Input and Select Styling */
+input, select, #taskDescription {
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input:focus, select:focus, #taskDescription:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 3px 8px rgba(76, 175, 80, 0.3);
+    outline: none;
+    transform: scale(1.02);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+    margin: 6px 0;
+    border-radius: 8px;
+    cursor: grab;
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+li:active {
+    transform: scale(1.03);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+
+/* Button Styling */
+button {
+    margin: 5px;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+    font-weight: bold;
+    animation: buttonFadeIn 0.5s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 72, 69, 0.5);
+}
+
+button:hover {
+    transform: scale(1.1) rotate(2deg);
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    box-shadow: 0px 0px 15px rgba(255, 72, 69, 0.7);
+}
+
+
+/* Dark Mode Base Styling */
+.dark-mode {
+    background: linear-gradient(135deg, #121212, #1e1e1e);
+    color: #ffffff;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .container {
+    background: linear-gradient(135deg, #141E30, #243B55);
+    color: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 201, 255, 0.5);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+    background: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #555;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.dark-mode input:focus,
+.dark-mode select:focus,
+.dark-mode textarea:focus {
+    border-color: #00C9FF;
+    box-shadow: 0 3px 8px rgba(0, 201, 255, 0.4);
+    outline: none;
+    transform: scale(1.02);
+}
+
+.dark-mode li {
+    background: #252525;
+    border-radius: 8px;
+    padding: 12px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 201, 255, 0.2);
+}
+
+.dark-mode li:hover {
+    background: #333;
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 201, 255, 0.3);
+}
+
+.dark-mode .completed {
+    text-decoration: line-through;
+    color: #aaa;
+    opacity: 0.7;
+}
+
+.dark-mode button {
+    background: linear-gradient(135deg, #00FF87, #00C9FF);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.dark-mode button:hover {
+    background: linear-gradient(135deg, #0072FF, #00C9FF);
+    transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.4);
+    }
+    100% {
+        box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes progressStripes {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 40px 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+li {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dark-mode li,
+.dark-mode .container {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+        margin-top: 8%;
+    }
+
+    input, select, #taskDescription {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+        margin-top: 10%;
+    }
+
+    input, select, #taskDescription {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+}
