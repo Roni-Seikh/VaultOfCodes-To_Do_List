@@ -26,8 +26,18 @@ Welcome to **VaultOfCodes To-Do List**, an advanced task management web app desi
 📄 **README.md** – Project documentation
 
 ## 📸 Screenshots
-Here are some previews of the project:
-![Task Management](Screenshots/tasks.png)
+![AI Suggestions Task (Light Mode)](https://github.com/Roni-Seikh/VaultOfCodes-To_Do_List/blob/main/Screenshots/AI%20Suggesions%20Task%20Light%20Mode.png)
+![Add Task (Light Mode)](https://github.com/Roni-Seikh/VaultOfCodes-To_Do_List/blob/main/Screenshots/Add%20Task%20Light%20Mode.png)
+![Add Task (Mobile Dark Mode)](https://github.com/Roni-Seikh/VaultOfCodes-To_Do_List/blob/main/Screenshots/Add%20Task%20Mobile%20Dark%20Mode.png)
+![Add Task (Mobile Light Mode)](https://github.com/Roni-Seikh/VaultOfCodes-To_Do_List/blob/main/Screenshots/Add%20Task%20mobile%20Light%20Mode.png)
+![Home Page (Dark Mode)](https://github.com/Roni-Seikh/VaultOfCodes-To_Do_List/blob/main/Screenshots/Home%20Page%20Dark%20Mode.png)
+![Home Page (Light Mode)](https://github.com/Roni-Seikh/VaultOfCodes-To_Do_List/blob/main/Screenshots/Home%20Page%20Light%20Mode.png)
+![Home Page (Mobile Dark Mode)](https://github.com/Roni-Seikh/VaultOfCodes-To_Do_List/blob/main/Screenshots/Home%20Page%20Mobile%20Dark%20Mode.png)
+![Home Page (Mobile Light Mode)](https://github.com/Roni-Seikh/VaultOfCodes-To_Do_List/blob/main/Screenshots/Home%20Page%20Mobile%20Light%20Mode.png)
+![Task Add (Dark Mode)](https://github.com/Roni-Seikh/VaultOfCodes-To_Do_List/blob/main/Screenshots/Task%20Add%20Dark%20Mode.png)
+![Task Categories (Light Mode)](https://github.com/Roni-Seikh/VaultOfCodes-To_Do_List/blob/main/Screenshots/Task%20Categories%20Light%20Mode.png)
+![Task Complete (Light Mode)](https://github.com/Roni-Seikh/VaultOfCodes-To_Do_List/blob/main/Screenshots/Task%20Complete%20Light%20Mode.png)
+![Task Filling (Light Mode)](https://github.com/Roni-Seikh/VaultOfCodes-To_Do_List/blob/main/Screenshots/Task%20Filling%20Light%20Mode.png)
 
 ## 🛠️ Tech Stack
 - HTML5
