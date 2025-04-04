@@ -1,7 +1,7 @@
 
 # 📌 VaultOfCodes To-Do List
 
-![Home Page](Screenshots/home.png)
+![Home Page](https://github.com/Roni-Seikh/VaultOfCodes-To_Do_List/blob/main/Screenshots/Home%20Page%20Dark%20Mode.png)
 
 ## 🚀 Overview
 Welcome to **VaultOfCodes To-Do List**, an advanced task management web app designed to boost productivity and keep you organized effortlessly. This project was developed as part of my **internship at Vault of Codes**. 
